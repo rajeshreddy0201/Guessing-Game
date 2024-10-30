@@ -1,3 +1,4 @@
+// Home.js
 import React, { useState } from "react";
 import './Home.css';
 
@@ -27,7 +28,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Welcome to the Mystery Number Guessing Game!</h1>
       <input
         type="number"
@@ -37,7 +38,7 @@ function Home() {
       />
       <button onClick={handleGuess}>Submit Guess</button>
       <p>{message}</p>
-      {message.includes("Correct") && <button onClick={resetGame}>Play Again</button>}
+      {message.includes("Correct") && <button className="play-again-button" onClick={resetGame}>Play Again</button>}
     </div>
   );
 }
