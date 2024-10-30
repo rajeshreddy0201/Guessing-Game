@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './Home.css';
 
 function Home() {
-  const [targetNumber] = useState();
+  const [targetNumber] = useState(Math.floor(Math.random() * 100) + 1);
   const [guess, setGuess] = useState("");
   const [message, setMessage] = useState("");
   const [attempts, setAttempts] = useState(0);
