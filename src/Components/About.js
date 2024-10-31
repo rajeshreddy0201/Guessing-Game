@@ -7,7 +7,7 @@ function About() {
   };
 
   return (
-    <div classname="home-container">
+    <div className="home-container">
       <h1>About Us</h1>
       <p>This app includes a number guessing game, a task list, and a contact form.</p>
       <button onClick={showFunFact}>Show Fun Fact</button>
