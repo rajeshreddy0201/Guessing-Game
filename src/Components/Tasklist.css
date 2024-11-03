@@ -1,52 +1,106 @@
 .task-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .task-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .task-container input[type="text"] {
-    padding: 8px;
-    margin-right: 8px;
-  }
-  
-  .task-container button {
-    padding: 8px 12px;
-    margin: 5px;
-    cursor: pointer;
-  }
-  
-  .filter-buttons button {
-    margin-right: 5px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  li.completed .task-text {
-    text-decoration: line-through;
-    color: #888;
-  }
-  
-  .task-text {
-    flex: 1;
-    cursor: pointer;
-  }
-  
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+.add-task-btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.filter-buttons button {
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #0f100f;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter-buttons button:hover {
+  background-color: #d5d5d5;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.task-text {
+  flex: 1;
+  cursor: pointer;
+}
+
+.complete-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.complete-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.save-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #757575;
+  color: white;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 5px;
+  font-size: 1em;
+}

@@ -10,7 +10,7 @@ function Navbar() {
       <Link to="/" className={location.pathname === "/" ? "active" : ""}>Home</Link>
       <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>About</Link>
       <Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact</Link>
-      <Link to="/tasks" className={location.pathname === "/tasks" ? "active" : ""}>Task List</Link>
+      <Link to="/taskList" className={location.pathname === "/taskList" ? "active" : ""}>Task List</Link>
     </nav>
   );
 }

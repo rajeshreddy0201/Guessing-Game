@@ -6,19 +6,19 @@ import About from "./Components/About";
 import Contact from "./Components/contact";
 import Tasklist from "./Components/Tasklist";
 
-
 function App() {
   return (
     <Router>
-           <Navbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/task" element={<Tasklist />} />
+        <Route path="/taskList" element={<Tasklist />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+

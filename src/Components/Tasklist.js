@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Tasklist.css'; 
+import "./Tasklist.css";
 
 function Tasklist() {
   const [tasks, setTasks] = useState([]);
@@ -53,38 +53,40 @@ function Tasklist() {
         type="text"
         value={newTask}
         onChange={(e) => setNewTask(e.target.value)}
-        placeholder="New task"
+        placeholder="Enter a new task"
+        className="task-input"
       />
-      <button onClick={addTask}>Add Task</button>
-      
+      <button onClick={addTask} className="add-task-btn">Add Task</button>
+
       <div className="filter-buttons">
         <button onClick={() => setFilter("all")}>All</button>
         <button onClick={() => setFilter("completed")}>Completed</button>
         <button onClick={() => setFilter("incomplete")}>Incomplete</button>
       </div>
 
-      <ul>
+      <ul className="task-list">
         {filteredTasks.map((task, index) => (
-          <li key={index} className={task.completed ? "completed" : ""}>
+          <li key={index} className={`task-item ${task.completed ? "completed" : ""}`}>
             {editingIndex === index ? (
               <>
                 <input
                   type="text"
                   value={editingText}
                   onChange={(e) => setEditingText(e.target.value)}
+                  className="edit-input"
                 />
-                <button onClick={() => saveEdit(index)}>Save</button>
-                <button onClick={() => setEditingIndex(null)}>Cancel</button>
+                <button onClick={() => saveEdit(index)} className="save-btn">Save</button>
+                <button onClick={() => setEditingIndex(null)} className="cancel-btn">Cancel</button>
               </>
             ) : (
               <>
                 <span onClick={() => startEditing(index)} className="task-text">
                   {task.text}
                 </span>
-                <button onClick={() => Complete(index)}>
+                <button onClick={() => Complete(index)} className="complete-btn">
                   {task.completed ? "Undo" : "Complete"}
                 </button>
-                <button onClick={() => deleteTask(index)}>Delete</button>
+                <button onClick={() => deleteTask(index)} className="delete-btn">Delete</button>
               </>
             )}
           </li>
